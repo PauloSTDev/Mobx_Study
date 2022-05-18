@@ -27,8 +27,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  mobx:
-  flutter_mobx:
+  mobx: ^2.0.7
+  flutter_mobx: ^2.0.5
   flutter:
     sdk: flutter
 
