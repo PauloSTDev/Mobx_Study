@@ -11,6 +11,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final counter = Counter();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,9 +23,13 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Observer(
-              builder: (_) => Text("${counter.value}"),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: Observer(
+              builder: (_) => Text("${counter.value}",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
+          ),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Row(
@@ -39,6 +44,22 @@ class _HomePageState extends State<HomePage> {
                     onPressed: () => counter.increment(),
                     child: const Text(
                       "Adiciona",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 40,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.blueAccent,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: TextButton(
+                    onPressed: () => counter.reset(),
+                    child: const Text(
+                      "Zerar",
                       style: TextStyle(color: Colors.black),
                     ),
                   ),

@@ -20,4 +20,9 @@ abstract class _Counter with Store {
   void decrement() {
     value--;
   }
+
+  @action
+  void reset() {
+    value = 0;
+  }
 }
