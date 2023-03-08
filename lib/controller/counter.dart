@@ -8,22 +8,29 @@ class Counter = _Counter with _$Counter;
 
 // The store-class
 abstract class _Counter with Store {
-  @observable
-  int value = 0;
+  // @observable
+  // int _value = 0;
 
-  // actions are method
+  // @computed
+  // int get value => _value;
+
+  // Annotation which makes getters for private variables.
+  @readonly
+  int _value = 0;
+
+  // actions are methods
   @action
   void increment() {
-    value++;
+    _value++;
   }
 
   @action
   void decrement() {
-    value--;
+    _value--;
   }
 
   @action
   void reset() {
-    value = 0;
+    _value = 0;
   }
 }

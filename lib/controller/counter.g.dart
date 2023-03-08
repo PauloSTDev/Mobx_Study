@@ -9,18 +9,20 @@ part of 'counter.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$Counter on _Counter, Store {
-  late final _$valueAtom = Atom(name: '_Counter.value', context: context);
+  late final _$_valueAtom = Atom(name: '_Counter._value', context: context);
 
-  @override
   int get value {
-    _$valueAtom.reportRead();
-    return super.value;
+    _$_valueAtom.reportRead();
+    return super._value;
   }
 
   @override
-  set value(int value) {
-    _$valueAtom.reportWrite(value, super.value, () {
-      super.value = value;
+  int get _value => value;
+
+  @override
+  set _value(int value) {
+    _$_valueAtom.reportWrite(value, super._value, () {
+      super._value = value;
     });
   }
 
@@ -63,7 +65,7 @@ mixin _$Counter on _Counter, Store {
   @override
   String toString() {
     return '''
-value: ${value}
+
     ''';
   }
 }
