@@ -34,3 +34,14 @@ Pacotes e passo a passo detalhado: https://mobx.netlify.app/getting-started/
 ## ObservableList
 
 #### An ObservableList gives you a deeper level of observability on a list of values. It tracks when items are added, removed or modified and notifies the observers. Use an ObservableList when a change in the list matters. You can couple this with the @observable annotation to also track when the list reference changes, eg: going from null to a list with values.
+
+<div align="center">
+<img width="601" alt="Captura de Tela 2023-03-08 às 16 48 44" src="https://user-images.githubusercontent.com/67521304/223829514-3691ba33-bdc8-4647-904c-82bc7fe16583.png">
+</div>
+
+<div align="center">
+<img width="601" alt="Captura de Tela 2023-03-08 às 16 50 17" src="https://user-images.githubusercontent.com/67521304/223830047-5b2fd778-fde5-4f78-b3da-502dce4c0d5a.png">
+
+</div>
+
+
