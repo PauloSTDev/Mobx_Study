@@ -5,6 +5,7 @@ import 'package:mobx_study/controller/counter.dart';
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 
+  // Instantiate the store
   final counter = Counter();
 
   @override
@@ -20,6 +21,7 @@ class HomePage extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.all(20),
+            // Wrapping in the Observer will automatically re-render on changes to counter.value
             child: Observer(
               builder: (_) => Text("${counter.value}",
                   style: const TextStyle(
@@ -37,6 +39,7 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: TextButton(
+                    // Call action of the Instantiated
                     onPressed: () => counter.increment(),
                     child: const Text(
                       "Adiciona",
@@ -53,6 +56,7 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: TextButton(
+                    // Call action of the Instantiated
                     onPressed: () => counter.reset(),
                     child: const Text(
                       "Zerar",
@@ -69,6 +73,7 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: TextButton(
+                    // Call action of the Instantiated
                     onPressed: () => counter.decrement(),
                     child: const Text(
                       "Remove",
