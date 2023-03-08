@@ -30,3 +30,7 @@ Pacotes e passo a passo detalhado: https://mobx.netlify.app/getting-started/
 #### Computeds form the derived state of your application. They depend on other observables or computeds for their value. Any time the depending observables change, they will recompute their new value. Computeds are also smart and cache their previous value. Only when the computed-value is different than the cached-value, will they fire notifications. This behavior is key to ensure the connected reactions don't execute unnecessarily.
 
 #### - @computed
+
+## ObservableList
+
+#### An ObservableList gives you a deeper level of observability on a list of values. It tracks when items are added, removed or modified and notifies the observers. Use an ObservableList when a change in the list matters. You can couple this with the @observable annotation to also track when the list reference changes, eg: going from null to a list with values.
