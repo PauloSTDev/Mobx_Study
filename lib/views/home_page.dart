@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx_study/controller/counter.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   final counter = Counter();
 
   @override
@@ -24,10 +19,11 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: Observer(
               builder: (_) => Text("${counter.value}",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 20)),
             ),
           ),
           Padding(
