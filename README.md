@@ -2,7 +2,9 @@
 
 Projeto de estudos do package Mobx, State Management
 
-Pacotes e passo a passo: https://mobx.netlify.app/getting-started/
+Para rodar o projeto basta rodar o comando flutter pub get e flutter pub run build_runner build e rode o projeto. Caso tenha algum erro rodando o flutter pub run build_runner build, rode o comando flutter pub upgrade e tente novamente.
+
+Pacotes e passo a passo detalhado: https://mobx.netlify.app/getting-started/
 
 <div align="center">
   <h2> Contador de Cliques</h2>
