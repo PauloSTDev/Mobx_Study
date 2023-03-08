@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:mobx_study/controller/counter.dart';
+import 'package:mobx_study/controller/contact/contact.dart';
+import 'package:mobx_study/controller/counter/counter.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 
   // Instantiate the store
   final counter = Counter();
+  final contact = Contact();
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +28,12 @@ class HomePage extends StatelessWidget {
               builder: (_) => Text("${counter.value}",
                   style: const TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 20)),
+            ),
+          ),
+          Observer(
+            builder: (_) => Text(
+              contact.fullName,
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
           ),
           Padding(
@@ -86,6 +94,9 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () => contact.first = "Ricardo",
+          child: const Icon(Icons.change_circle)),
     );
   }
 }
