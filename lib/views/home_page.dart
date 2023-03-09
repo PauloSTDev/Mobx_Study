@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx_study/controller/contact/contact.dart';
 import 'package:mobx_study/controller/counter/counter.dart';
+import 'package:mobx_study/views/list_page.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -17,6 +18,16 @@ class HomePage extends StatelessWidget {
         title: const Text("Mobx Flutter",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
         centerTitle: true,
+        actions: [
+          IconButton(
+              onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ListPage(),
+                    ),
+                  ),
+              icon: const Icon(Icons.list))
+        ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

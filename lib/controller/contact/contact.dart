@@ -12,5 +12,5 @@ abstract class _Contact with Store {
   String last = 'Santos';
 
   @computed
-  String get fullName => '${first} ${last}';
+  String get fullName => '$first $last';
 }
